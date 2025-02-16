@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driving School Questionnaire</title>
+    <link rel="stylesheet" href="cssfile.css">
+</head>
+<body>
+    <!-- Logo Outside of the Form Container -->
+    <img src="Images/Driving Logo.png" alt="Driving School Logo" class="logo">
+
+    <div class="form-container">
+        <h1>Driving School Questionnaire</h1>
+        <form id="questionnaire-form">
+            <div id="questionnaire"></div> <!-- This will be dynamically populated -->
+
+            <button type="button" id="submit-btn">Submit</button>
+
+            <div id="result" class="result-section" style="display: none;">
+                <h2>Quiz Completed!</h2>
+                <p id="result-text"></p>
+            </div>
+        </form>
+    </div>
+
+    <script src="jsfile.js"></script>
+</body>
+</html>
