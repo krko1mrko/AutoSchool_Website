@@ -7,16 +7,21 @@
     <link rel="stylesheet" href="cssfile.css">
 </head>
 <body>
-    <!-- Logo Outside of the Form Container -->
-    <img src="Images/Driving Logo.png" alt="Driving School Logo" class="logo">
+    <!-- Logo Section -->
+    <div class="logo-container">
+        <img src="Images/Driving Logo.png" alt="Driving School Logo" class="logo">
+    </div>
 
+    <!-- Form Container -->
     <div class="form-container">
         <h1>Driving School Questionnaire</h1>
         <form id="questionnaire-form">
-            <div id="questionnaire"></div> <!-- This will be dynamically populated -->
+            <div id="questionnaire"></div>
 
+            <!-- Submit Button -->
             <button type="button" id="submit-btn">Submit</button>
 
+            <!-- Result Section -->
             <div id="result" class="result-section" style="display: none;">
                 <h2>Quiz Completed!</h2>
                 <p id="result-text"></p>
