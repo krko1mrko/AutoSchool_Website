@@ -10,6 +10,7 @@ const signsQuestions = [
 ];
 
 const generalQuestions = [
+    
     { id: "gq1", text: "Kretanje vozilom unazad dozvoljeno je:", type: "radio", options: ["Na kratkom dijelu puta u nepreglednoj krivini", "Na kratkom dijelu puta u tunelu", "Na kratkom dijelu puta"], answer: "Na kratkom dijelu puta", points: 2 },
     { id: "gq2", text: "Na magistralnom putu van naselja, gdje nema znaka ograničenja brzine, vozač ne smije vozilom da se kreće brzinom većom od:", type: "radio", options: ["60 km/h", "70 km/h", "80 km/h"], answer: "80 km/h", points: 2 },
     { id: "gq3", text: "Pješačko ostrvo koje se nalazi na sredini kolovoza, gdje se saobraćaj odvija u oba smjera, obilazi se vozilom:", type: "radio", options: ["uvijek sa desne strane", "uvijek sa lijeve strane", "sa bilo koje strane"], answer: "uvijek sa desne strane", points: 2 },
@@ -106,6 +107,56 @@ const generalQuestions = [
     { id: "gq94", text: "Kad kod povrijeđenog hoćemo da zaustavimo krvarenje upotrebljavamo:", type: "radio", options: ["jod i sterilnu gazu", "kompresivni zavoj", "alkohol i sterilnu gazu"], answer: "kompresivni zavoj", points: 3 },
     { id: "gq95", text: "Broj hitne pomoći je:", type: "radio", options: ["122", "123", "124"], answer: "124", points: 2 },
     
+];
+
+const generalQuestions2 = [
+
+    { id: "q1", text: "Radno kočenje ne mora da ima:", type: "radio", options: ["poluprikolica sa tri osovine", "putničko vozilo do 750 kg sopstvene mase", "laka prikolica"], answer: "laka prikolica", points: 1 },
+    { id: "q2", text: "Svijetlo za maglu na zadnjoj strani vozila je:", type: "radio", options: ["crvene boje", "žute boje", "bijele boje"], answer: "crvene boje", points: 1 },
+    { id: "q3", text: "Blatobrani na motornom vozilu moraju da budu postavljeni tako da pokrivaju širinu:", type: "radio", options: ["samo zadnjih točkova", "samo prednjih točkova", "svih točkova"], answer: "svih točkova", points: 1 },
+    { id: "q4", text: "Učesnika u saobraćajnoj nezgodi koji je zadobio povrede grudnog koša postavljamo:", type: "radio", options: ["u ležeći položaj", "na bočnu stranu", "u polusjedeći položaj"], answer: "u polusjedeći položaj", points: 1 },
+    { id: "q5", text: "Pod opekotinom podrazumijevamo povredu nastalu od:", type: "radio", options: ["upale kože", "djelovanja toplote", "uboda črvstog predmeta"], answer: "djelovanja toplote", points: 1 },
+    { id: "q6", text: "Pod uređajem na vozilu koji omogućava normalnu vidljivost smatra se:", type: "radio", options: ["svijetlo za maglu", "poziciono svijetlo", "vjetrobran"], answer: "vjetrobran", points: 1 },
+    { id: "q7", text: "Svjetlost pokazivača pravca mora da bude:", type: "radio", options: ["žute boje", "bijele boje", "crvene boje"], answer: "žute boje", points: 1 },
+    { id: "q8", text: "Protiv blokirajući sistem (ABS) je dio sistema za:", type: "radio", options: ["osvjetljavanje kolovoza", "prenos snage", "za kočenje"], answer: "za kočenje", points: 1 },
+    { id: "q9", text: "Pod imobilizacijom podrazumijevamo:", type: "radio", options: ["stavljanje sterilne gaze na povrijeđeni dio tijela", "stavljanje povrijeđenog dijela tijela u stanje mirovanja", "vraćanje povrijeđenog u stanje svijesti"], answer: "stavljanje povrijeđenog dijela tijela u stanje mirovanja", points: 1 },
+    { id: "q10", text: "Koliki je broj otkucaja srca kod normalne zdrave osobe:", type: "radio", options: ["do 60 otkucaja u jednoj sekundi", "60 do 80 otkucaja u jednom minutu", "preko 100 otkucaja u jednom minutu"], answer: "60 do 80 otkucaja u jednom minutu", points: 1 },
+    { id: "q11", text: "Slobodan hod točka upravljača na vozilu na motorni pogon ne smije biti veći od:", type: "radio", options: ["20 stepeni", "30 stepeni", "40 stepeni"], answer: "30 stepeni", points: 1 },
+    { id: "q12", text: "Na motornom vozilu se serijski ugrađuju:", type: "radio", options: ["radna, pomoćna i parkirna kočnica", "radna i pomoćna kočnica i trajni usporivač", "radna i parkirna kočnica i trajni usporivač"], answer: "radna, pomoćna i parkirna kočnica", points: 1 },
+    { id: "q13", text: "Najveća dozvoljena dužina motornog vozila osim autobusa je:", type: "radio", options: ["8 metara", "10 metara", "12 metara"], answer: "12 metara", points: 1 },
+    { id: "q14", text: "Kada dodje do umora tokom vožnje potrebno je:", type: "radio", options: ["usporenim kretanjem nastaviti vožnju", "konzumirati energetske napitke i nastaviti vožnju", "napraviti pauzu za odmor"], answer: "napraviti pauzu za odmor", points: 1 },
+    { id: "q15", text: "Krvarenje kod povrijeđenog je:", type: "radio", options: ["isticanje krvi iz krvnih sudova", "zatvoreni prelom podkoljenice", "zgrušavanje krvi u krvnom sudu"], answer: "isticanje krvi iz krvnih sudova", points: 1 },
+    { id: "q16", text: "Od određene opreme u autobusu mora da postoje: ", type: "radio", options: ["tri kutije prve pomoći", "dvije kutije prve pomoći", "jedna kutija prve pomoći"], answer: "dvije kutije prve pomoći", points: 1 },
+    { id: "q17", text: "Pod uređajima za davanje svjetlosnih znakova ne smatraju se:", type: "radio", options: ["stop-svijetla", "pokazivači pravca", "katadiopteri"], answer: "katadiopteri", points: 1 },
+    { id: "q18", text: "Parkirnu kočnicu kod vozila vozač koristi:", type: "radio", options: ["da zaustavi vozilo kada naiđe na iznenadnu prepreku", " da spriječi pokretanje zaustavljenog vozila", "da spriječi pokretanje vozila samo dok je parkirano u garaži"], answer: " da spriječi pokretanje zaustavljenog vozila", points: 1 },
+    { id: "q19", text: "Arterijsko krvarenje kod povrijeđenog prepoznaje se po:", type: "radio", options: ["laganom isticanju krvi i zgrušavanju na povrijeđenom dijela tijela", "krvi u mlazevima", "otoku i modrim podlivima povrijeđenog dijela tijela"], answer: "krvi u mlazevima", points: 1 },
+    { id: "q20", text: "Ako je licu u saobraćajnoj nezgodi povrijeđena glava i vrat:", type: "radio", options: ["povrijeđenog što manje pomjerati", "postaviti ga u sjedeći položaj", "postaviti ga na bok u ležeći položaj"], answer: "postaviti ga na bok u ležeći položaj", points: 1 },
+    { id: "q21", text: "Sastavni dio motora sa unutrašnjim sagorijevanjem je:", type: "radio", options: ["koljenasto vratilo", "kardansko vratilo", "poluvratilo"], answer: "koljenasto vratilo", points: 1 },
+    { id: "q22", text: "Servo uređaj za upravljanje:", type: "radio", options: ["smanjuje ugao zakretanja upravljačkih točkova", "smanjuje ukupnu silu djelovanja vozača kod zakretanja točka upravljača i obezbjeđuje lakoću upravljanja", "smanjuje prečnik putanje pri skretanja vozila"], answer: "smanjuje ukupnu silu djelovanja vozača kod zakretanja točka upravljača i obezbjeđuje lakoću upravljanja", points: 1 },
+    { id: "q23", text: "Svijetla glavnih svjetala treba da budu:", type: "radio", options: ["bijele boje", "žute boje", "crvene boje"], answer: "bijele boje", points: 1 },
+    { id: "q24", text: "Neposredno nakon saobraćaje nezgode, lice koje je učestvovalo u saobraćajnoj nezgodi:", type: "radio", options: ["smije da konzumira alkoholno piće", "smije da konzumira sedative za smirenje", "ne smije da konzumira alkoholno piće"], answer: "ne smije da konzumira alkoholno piće", points: 1 },
+    { id: "q25", text: "Ako je lice koje je povrijeđeno u saobraćajnoj nezgodi bez svijesti treba ga:", type: "radio", options: ["postaviti u ležeći položaj na leđa", "postaviti u ležeći položaj na stomak", "postaviti u bočni položaj"], answer: "postaviti u bočni položaj", points: 1 },
+    { id: "q26", text: "Pod opremom motornih i priključnih vozila ne smatra se:", type: "radio", options: ["bočni retrovizor", "rezervni točak", "rezervne sijalice"], answer: "bočni retrovizor", points: 1 },
+    { id: "q27", text: "Svjetlost dnevnog svijetla treba da bude:", type: "radio", options: ["žute boje", "plave boje", "bijele boje"], answer: "bočni retrovizor", points: 1 },
+    { id: "q28", text: "Minimalna dubina šare na gazećoj površini pneumatika za zimsku upotrebu treba da bude:", type: "radio", options: ["2 mm", "4 mm", "1,6 mm"], answer: "4 mm", points: 1 },
+    { id: "q29", text: "Broj policije je:", type: "radio", options: ["124", "112", "122"], answer: "122", points: 1 },
+    { id: "q30", text: "Kod povrijeđenog lica na ranu se prvo stavlja:", type: "radio", options: ["alkohol", "voda", "sterilna gaza"], answer: "sterilna gaza", points: 1 },
+    { id: "q31", text: "Vozila koja imaju ugrađene brisače vjetrobrana moraju imati i:", type: "radio", options: ["sunđer za pranje stakala", "perače vjetrobrana", "uređaj za zagrijavanje vjetrobrana"], answer: "perače vjetrobrana", points: 1 },
+    { id: "q32", text: "Svjetlosni snop oborenog svijetla treba da bude:", type: "radio", options: ["izveden kao lijevi asimetrični", "simetričan", "izveden kao desni asimetrični"], answer: "izveden kao desni asimetrični", points: 1 },
+    { id: "q33", text: "Uređaji za odvođenje i ispuštanje izduvnih gasova ne smiju da prelaze dimenzije vozila:", type: "radio", options: ["po dužini ili širini", "po visini", "više od 0,1 metar po dužini"], answer: "po dužini ili širini", points: 1 },
+    { id: "q34", text: "Mrtvačke pjege i hladno tijelo su:", type: "radio", options: ["stanja povrijeđnog usled gubljenja svijesti zbog hladnoće", "sigurni znak smrti", "sigurni znak umora"], answer: "sigurni znak smrti", points: 1 },
+    { id: "q35", text: "Broj telefona vatrogasne službe je:", type: "radio", options: ["123", "122", "124"], answer: "123", points: 1 },
+    { id: "q36", text: "Svijetla za vožnju unazad kod motornih vozila moraju biti:", type: "radio", options: ["bijele boje", "crvene boje", "žute boje"], answer: "bijele boje", points: 1 },
+    { id: "q37", text: "Radna kočnica motornih vozila treba da djeluje:", type: "radio", options: ["na sve točkove", "samo na prednje točkove", "samo na zadnje točkove"], answer: "na sve točkove", points: 1 },
+    { id: "q38", text: "Motorno vozilo koje pored sjedišta za vozača ima još najviše osam sjedišta je:", type: "radio", options: ["autobus", "teretno vozilo", "putničko vozilo"], answer: "putničko vozilo", points: 1 },
+    { id: "q39", text: "U pružanju prve pomoći u saobraćajnoj nezgodi ranu kod povrijeđenog:", type: "radio", options: ["treba isprati vodom", "treba isprati alkoholom", "ne treba ispirati tečnošću"], answer: "ne treba ispirati tečnošću", points: 1 },
+    { id: "q40", text: "Pod dejstvom alkohola je vozač:", type: "radio", options: ["ako se u organizmu utvrdi sadržaj alkohola veći od 0,3 g/kg", "ako se u organizmu utvrdi sadržaj alkohola do 0,3 g/kg", "ako se u organizmu utvrdi sadržaj alkohola do 0,2 g/kg"], answer: "ako se u organizmu utvrdi sadržaj alkohola veći od 0,3 g/kg", points: 1 },
+    { id: "q41", text: "Sastavni dio uređaja za upravljanje je:", type: "radio", options: ["pneumatik", "točak upravljača", "amortizer"], answer: "točak upravljača", points: 1 },
+    { id: "q42", text: "Sastavni dio uređaja za osvjetljavanje puta na motornim vozilima je:", type: "radio", options: ["stop svijetlo", "gabaritno svijetlo", "svijetlo za vožnju unazad"], answer: "svijetlo za vožnju unazad", points: 1 },
+    { id: "q43", text: "Sastavni dio prenosnika snage kod motornog vozila je:", type: "radio", options: ["mjenjač", "točak upravljača", "ručica parkirne kočnice"], answer: "mjenjač", points: 1 },
+    { id: "q44", text: "Prilikom imobilizacije povrijeđenog lica osnovno pravilo je:", type: "radio", options: ["imobilisati cijelo tijelo povrijeđenog", "imobilisati dva susjedna zgloba", "imobilisati samo zglob koji je najbliži povrijeđenom mjestu"], answer: "imobilisati dva susjedna zgloba", points: 1 },
+    { id: "q45", text: "Povrijeđeno lice koje izgubi dosta krvi ima:", type: "radio", options: ["dosta povišen krvni pritisak", "dosta usporen puls", "ubrzano i nepravilno disanje"], answer: "ubrzano i nepravilno disanje", points: 1 },
+
 ];
 
 // Function to get fixed number of questions from each pool
