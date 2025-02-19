@@ -6,7 +6,7 @@ const crossroadsQuestions = [
     { id: "cx4", text: "Znak izričite naredbe u situaciji kao na slici ima značenje:", type: "radio", options: ["ukrštanje sa putem sa prvenstvom prolaza", "prvenstvo u odnosu na vozila iz suprotnog smjera", "obavezno zaustavljanje"], answer: "ukrštanje sa putem sa prvenstvom prolaza", image: "Images3/2.png", points: 4 },
     { id: "cx5", text: "Kako ćete postupiti u situaciji prikazanoj na slici, ako sa vozilom 2 zadržavate pravac kretanja:", type: "radio", options: ["nastaviću kretanje bez propuštanja vozila", "nastaviću kretanje uz propuštanje samo vozila 1", "nastaviću kretanje uz propuštanje vozila 3 i 4"], answer: "nastaviću kretanje uz propuštanje vozila 3 i 4", image: "Images3/3.png", points: 3 },
     { id: "cx6", text: "U situaciji prikazanoj na slici redoslijed prolaska vozila je:", type: "radio", options: ["1234", "3214", "3421"], answer: "3421", image: "Images3/3.png", points: 3 },
-    { id: "cx7", text: "Ako je biciklista ušao u raskrsnicu na crveno svijetlo nasemaforu u smjeru svog kretanja, kao na slici:", type: "radio", options: ["propisno vrši radnju prolaska kroz raskrsnicu", "nepropisno jer treba da gura biciklo pored sebe", "nepropisno vrši radnju prolaska kroz raskrsnicu"], answer: "nepropisno vrši radnju prolaska kroz raskrsnicu", image: "Images3/4.png", points: 4 },
+    { id: "cx7", text: "Ako je biciklista ušao u raskrsnicu na crveno svijetlo na semaforu u smjeru svog kretanja, kao na slici:", type: "radio", options: ["propisno vrši radnju prolaska kroz raskrsnicu", "nepropisno jer treba da gura biciklo pored sebe", "nepropisno vrši radnju prolaska kroz raskrsnicu"], answer: "nepropisno vrši radnju prolaska kroz raskrsnicu", image: "Images3/4.png", points: 4 },
     { id: "cx8", text: "U situaciji prikazanoj na slici biciklista prelazi kolovoz na:", type: "radio", options: ["obilježenoj biciklističkoj stazi", "obilježenoj biciklističkoj traci", "obilježenoj razdjelnoj liniji pješačkog prelaza"], answer: "obilježenoj biciklističkoj stazi", image: "Images3/4.png", points: 3 },
     { id: "cx9", text: "Kako ćete postupiti u situaciji prikazanoj na slici:", type: "radio", options: ["propustiću putničko vozilo 3 i nastaviti kretanje", "propustiću tramvaj 2 i nastaviti kretanje", "propustiću tramvaj 2 i putničko vozilo 3, pa nastaviti kretanje"], answer: "propustiću putničko vozilo 3 i nastaviti kretanje", image: "Images3/5.png", points: 4 },
     { id: "cx10", text: "Redoslijed prolaska vozila kroz raskrsnicu je:", type: "radio", options: ["321", "312", "231"], answer: "312", image: "Images3/5.png", points: 3 },
@@ -291,4 +291,14 @@ function showResult() {
 }
 
 document.getElementById("submit-btn").addEventListener("click", showResult);
+window.onload = function () {
+    loadQuestions();
+
+    // Ensure touch compatibility
+    document.getElementById("submit-btn").addEventListener("touchend", function (event) {
+        event.preventDefault();
+        showResult();
+    });
+};
+
 window.onload = loadQuestions;
