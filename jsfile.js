@@ -284,7 +284,7 @@ function showResult() {
         }
     });
 
-    document.getElementById("result-text").innerHTML = `You answered ${correctAnswers} correctly.<br><strong>Score: ${totalPoints}/80</strong>`;
+    document.getElementById("result-text").innerHTML = `Odogovorili ste ${correctAnswers} tacnih odgovora.<br><strong>Poeni: ${totalPoints}/80</strong>`;
     document.getElementById("questionnaire").style.display = 'none';
     document.getElementById("result").style.display = 'block';
     document.getElementById("submit-btn").style.display = 'none';
